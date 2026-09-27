@@ -1,1 +1,26 @@
-
+{
+  "uwCourse": {
+    "id": "uw-cs564",
+    "school": "UW-Madison",
+    "courseCode": "CS 564",
+    "title": "Database Management Systems",
+    "description": "Relational database design, SQL, query processing and optimization, transactions, and concurrency control.",
+    "topics": ["Relational Algebra", "SQL", "Normalization", "Query Optimization", "Transactions", "Indexing"],
+    "credits": 3,
+    "level": "intermediate",
+    "prerequisites": ["CS 400"],
+    "sourceUrl": "https://guide.wisc.edu/courses/comp_sci/"
+  },
+  "foreignCourse": {
+    "id": "unimelb-comp30022",
+    "school": "University of Melbourne",
+    "courseCode": "COMP30022",
+    "title": "Database Systems",
+    "description": "Database design, relational model, SQL, transaction processing, and an introduction to distributed databases.",
+    "topics": ["Relational Algebra", "SQL", "Normalization", "Transactions", "Distributed Databases"],
+    "credits": 3,
+    "level": "intermediate",
+    "prerequisites": ["Data Structures and Algorithms"],
+    "sourceUrl": "https://handbook.unimelb.edu.au/"
+  }
+}
