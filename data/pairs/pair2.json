@@ -1,1 +1,26 @@
-
+{
+  "uwCourse": {
+    "id": "",
+    "school": "UW-Madison",
+    "courseCode": "",
+    "title": "",
+    "description": "",
+    "topics": [],
+    "credits": 0,
+    "level": "intro",
+    "prerequisites": [],
+    "sourceUrl": ""
+  },
+  "foreignCourse": {
+    "id": "",
+    "school": "",
+    "courseCode": "",
+    "title": "",
+    "description": "",
+    "topics": [],
+    "credits": 0,
+    "level": "intro",
+    "prerequisites": [],
+    "sourceUrl": ""
+  }
+}
