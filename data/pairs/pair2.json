@@ -1,26 +1,27 @@
 {
   "uwCourse": {
-    "id": "",
+
+    "id": "uw-cs537",
     "school": "UW-Madison",
-    "courseCode": "",
-    "title": "",
-    "description": "",
-    "topics": [],
-    "credits": 0,
-    "level": "intro",
-    "prerequisites": [],
-    "sourceUrl": ""
+    "courseCode": "CS 537",
+    "title": "Introduction to Operating Systems",
+    "description": "Process management, concurrency, memory management, file systems, and I/O in modern operating systems.",
+    "topics": ["Processes and Threads", "Scheduling", "Virtual Memory", "File Systems", "Concurrency", "Synchronization"],
+    "credits": 3,
+    "level": "advanced",
+    "prerequisites": ["CS 354", "CS 400"],
+    "sourceUrl": "https://guide.wisc.edu/courses/comp_sci/"
   },
   "foreignCourse": {
-    "id": "",
-    "school": "",
-    "courseCode": "",
-    "title": "",
-    "description": "",
-    "topics": [],
-    "credits": 0,
-    "level": "intro",
-    "prerequisites": [],
-    "sourceUrl": ""
+    "id": "ed-inf2c",
+    "school": "University of Edinburgh",
+    "courseCode": "INFR10012",
+    "title": "Operating Systems",
+    "description": "Core operating system concepts including process scheduling, memory management, file systems, and concurrency control.",
+    "topics": ["Scheduling", "Virtual Memory", "File Systems", "Concurrency", "Deadlocks"],
+    "credits": 4,
+    "level": "intermediate",
+    "prerequisites": ["Introduction to Computer Systems"],
+    "sourceUrl": "https://www.drps.ed.ac.uk/"
   }
 }

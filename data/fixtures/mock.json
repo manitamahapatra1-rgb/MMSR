@@ -1,1 +1,40 @@
-
+{
+  "uwCourse": {
+    "id": "uw-cs577",
+    "school": "UW-Madison",
+    "courseCode": "CS 577",
+    "title": "Introduction to Algorithms",
+    "description": "Design and analysis of algorithms: divide and conquer, dynamic programming, greedy methods, graph algorithms, NP-completeness.",
+    "topics": ["Dynamic Programming", "Greedy Algorithms", "Graph Algorithms", "NP-Completeness", "Divide and Conquer"],
+    "credits": 3,
+    "level": "advanced",
+    "prerequisites": ["CS 400", "Math 240"],
+    "sourceUrl": "https://guide.wisc.edu/courses/comp_sci/"
+  },
+  "foreignCourse": {
+    "id": "nus-cs3230",
+    "school": "National University of Singapore",
+    "courseCode": "CS3230",
+    "title": "Design and Analysis of Algorithms",
+    "description": "Algorithm design paradigms and complexity theory, including dynamic programming, graph algorithms, and NP-completeness.",
+    "topics": ["Dynamic Programming", "Graph Algorithms", "NP-Completeness", "Divide and Conquer", "Randomized Algorithms"],
+    "credits": 4,
+    "level": "advanced",
+    "prerequisites": ["CS2040"],
+    "sourceUrl": "https://nusmods.com/courses/CS3230"
+  },
+  "topicCoverage": [
+    { "topic": "Dynamic Programming", "coverage": "covered", "evidence": "Weeks 4-5: DP formulation and examples" },
+    { "topic": "Greedy Algorithms", "coverage": "partial", "evidence": "Brief mention in Week 3, no dedicated module" },
+    { "topic": "Graph Algorithms", "coverage": "covered", "evidence": "Weeks 7-8: shortest paths, MST, network flow" },
+    { "topic": "NP-Completeness", "coverage": "covered", "evidence": "Week 11: reductions and NP-hardness proofs" },
+    { "topic": "Divide and Conquer", "coverage": "covered", "evidence": "Week 2: master theorem and examples" }
+  ],
+  "matchPercentage": 88,
+  "extraTopics": ["Randomized Algorithms"],
+  "caveats": [
+    "Greedy algorithms coverage is lighter than UW's treatment",
+    "4 credits vs UW's 3 - may need an advisor note on the credit differential"
+  ],
+  "advisorJustification": "CS3230 at NUS covers substantially the same core algorithmic paradigms as UW CS 577, including dynamic programming, graph algorithms, and NP-completeness, at comparable depth. The main gap is lighter treatment of greedy algorithms, a minor portion of both syllabi."
+}

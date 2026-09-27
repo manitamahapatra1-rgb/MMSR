@@ -1,26 +1,27 @@
 {
   "uwCourse": {
-    "id": "",
+
+    "id": "uw-cs540",
     "school": "UW-Madison",
-    "courseCode": "",
-    "title": "",
-    "description": "",
-    "topics": [],
-    "credits": 0,
-    "level": "intro",
-    "prerequisites": [],
-    "sourceUrl": ""
+    "courseCode": "CS 540",
+    "title": "Introduction to Artificial Intelligence",
+    "description": "Search, machine learning fundamentals, neural networks, probabilistic reasoning, and reinforcement learning.",
+    "topics": ["Search Algorithms", "Supervised Learning", "Neural Networks", "Probabilistic Reasoning", "Reinforcement Learning"],
+    "credits": 3,
+    "level": "intermediate",
+    "prerequisites": ["CS 300", "Math 240"],
+    "sourceUrl": "https://guide.wisc.edu/courses/comp_sci/"
   },
   "foreignCourse": {
-    "id": "",
-    "school": "",
-    "courseCode": "",
-    "title": "",
-    "description": "",
-    "topics": [],
-    "credits": 0,
-    "level": "intro",
-    "prerequisites": [],
-    "sourceUrl": ""
+    "id": "utoronto-csc311",
+    "school": "University of Toronto",
+    "courseCode": "CSC311",
+    "title": "Introduction to Machine Learning",
+    "description": "Supervised and unsupervised learning, neural networks, decision trees, and probabilistic models.",
+    "topics": ["Supervised Learning", "Unsupervised Learning", "Neural Networks", "Decision Trees", "Probabilistic Models"],
+    "credits": 3,
+    "level": "intermediate",
+    "prerequisites": ["Calculus", "Linear Algebra", "Introduction to Programming"],
+    "sourceUrl": "https://artsci.calendar.utoronto.ca/"
   }
 }

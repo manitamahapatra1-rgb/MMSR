@@ -4,7 +4,7 @@ export interface CourseInfo {
   courseCode: string;
   title: string;
   description: string;
-  topics: string[];          // 5–10
+  topics: string[]; // 5–10
   credits: number;
   level: "intro" | "intermediate" | "advanced";
   prerequisites: string[];
@@ -14,7 +14,7 @@ export interface CourseInfo {
 export type Coverage = "covered" | "partial" | "missing";
 
 export interface TopicCoverage {
-  topic: string;             // a UW topic
+  topic: string; // a UW topic
   coverage: Coverage;
   evidence: string;
 }
@@ -23,9 +23,8 @@ export interface CourseMatch {
   uwCourse: CourseInfo;
   foreignCourse: CourseInfo;
   topicCoverage: TopicCoverage[];
-  matchPercentage: number;   // computed in code
+  matchPercentage: number; // computed in code
   extraTopics: string[];
   caveats: string[];
   advisorJustification: string;
 }
-
