@@ -1,4 +1,4 @@
-// lib/getMatch.ts — owned by Person 4
+﻿// lib/getMatch.ts â€” owned by Person 4
 // The ONE function the main page (Person 1) and report page (Person 3) use to get a result.
 // Call it from client components only ("use client"), since it uses fetch("/api/compare")
 // and browser storage.
@@ -8,16 +8,16 @@ import { getCourseById, matchKey } from "@/lib/courses";
 import mockJson from "@/data/fixtures/mock.json";
 import demoJson from "@/data/fixtures/demo.json";
 
-// ─── The switch ──────────────────────────────────────────────────────────────
-// "mock" → before 3:00. Returns the shared mock result (no API needed).
-// "live" → after the 3:00 checkpoint. Calls the real API, falls back to fixtures.
-// "demo" → while recording. Uses saved fixtures first, the API only if one is missing.
+// â”€â”€â”€ The switch â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+// "mock" â†’ before 3:00. Returns the shared mock result (no API needed).
+// "live" â†’ after the 3:00 checkpoint. Calls the real API, falls back to fixtures.
+// "demo" â†’ while recording. Uses saved fixtures first, the API only if one is missing.
 export type MatchMode = "mock" | "live" | "demo";
 export const MODE: MatchMode = "mock";
-// ─────────────────────────────────────────────────────────────────────────────
+// â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 
 const API_TIMEOUT_MS = 30_000;
-// Bump this (v2, v3…) whenever Person 2 changes the prompt, so old cached results are ignored.
+// Bump this (v2, v3â€¦) whenever Person 2 changes the prompt, so old cached results are ignored.
 const CACHE_VERSION = "v1";
 const STORAGE_PREFIX = `tcm:${CACHE_VERSION}:`;
 const MOCK_DELAY_MS = 700; // so Person 1 can see the loading state in mock mode
@@ -30,7 +30,7 @@ export interface MatchResult {
 
 const FRIENDLY_ERROR = "We couldn't compare these courses right now. Please try again in a moment.";
 
-// ─── Checking results ────────────────────────────────────────────────────────
+// â”€â”€â”€ Checking results â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 export function isCourseMatch(x: unknown): x is CourseMatch {
   const m = x as Record<string, unknown> | null;
   if (!m || typeof m !== "object") return false;
@@ -48,9 +48,9 @@ export function isCourseMatch(x: unknown): x is CourseMatch {
   );
 }
 
-// ─── Cache (memory + localStorage) ───────────────────────────────────────────
+// â”€â”€â”€ Cache (memory + localStorage) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // localStorage means the report page gets the SAME result the main page showed,
-// even if it opens in a new tab — instead of asking the AI again and getting a
+// even if it opens in a new tab â€” instead of asking the AI again and getting a
 // slightly different score.
 const memoryCache = new Map<string, CourseMatch>();
 const inFlight = new Map<string, Promise<CourseMatch>>();
@@ -72,7 +72,7 @@ function writeStored(key: string, match: CourseMatch): void {
   try {
     window.localStorage.setItem(STORAGE_PREFIX + key, JSON.stringify(match));
   } catch {
-    // Storage full or blocked — the memory cache still works.
+    // Storage full or blocked â€” the memory cache still works.
   }
 }
 
@@ -89,7 +89,7 @@ export function clearMatchCache(): void {
   }
 }
 
-// ─── Fixtures and mock ───────────────────────────────────────────────────────
+// â”€â”€â”€ Fixtures and mock â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 const fixtures = demoJson as Record<string, unknown>;
 
 function getFixture(key: string): CourseMatch | null {
@@ -107,10 +107,10 @@ function buildMock(uwId: string, foreignId: string): CourseMatch {
   };
 }
 
-// ─── Calling the real API ────────────────────────────────────────────────────
+// â”€â”€â”€ Calling the real API â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 // Contract with Person 2:
 //   POST /api/compare   body: { "uwCourseId": "...", "foreignCourseId": "..." }
-//   200 → a CourseMatch      error → any status with { "error": "message" }
+//   200 â†’ a CourseMatch      error â†’ any status with { "error": "message" }
 async function callApi(uwId: string, foreignId: string): Promise<CourseMatch> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), API_TIMEOUT_MS);
@@ -138,7 +138,7 @@ async function callApi(uwId: string, foreignId: string): Promise<CourseMatch> {
   }
 }
 
-// ─── Public functions ────────────────────────────────────────────────────────
+// â”€â”€â”€ Public functions â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 /**
  * Get a result plus where it came from ("mock", "cache", "live", "fixture").
  * Pass { fresh: true } to skip the cache and ask the API again.
@@ -199,8 +199,4 @@ export async function getMatch(
   options: { fresh?: boolean } = {}
 ): Promise<CourseMatch> {
   return (await getMatchWithSource(uwId, foreignId, options)).match;
-<<<<<<< HEAD
->>>>>>> main
-=======
->>>>>>> 7eea0ed73c1b42b221282ff9e51e382877380bb3
 }
