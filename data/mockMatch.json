@@ -1,0 +1,78 @@
+{
+  "uwCourse": {
+    "id": "uw-cs577",
+    "school": "UW-Madison",
+    "courseCode": "CS 577",
+    "title": "Introduction to Algorithms",
+    "description": "Design and analysis of algorithms, including divide-and-conquer, dynamic programming, greedy methods, graph algorithms, and NP-completeness.",
+    "topics": [
+      "Dynamic Programming",
+      "Greedy Algorithms",
+      "Graph Algorithms",
+      "Divide and Conquer",
+      "NP-Completeness",
+      "Amortized Analysis"
+    ],
+    "credits": 3,
+    "level": "advanced",
+    "prerequisites": ["CS 400", "CS 240"],
+    "sourceUrl": "https://guide.wisc.edu/courses/comp_sci/"
+  },
+  "foreignCourse": {
+    "id": "nus-cs3230",
+    "school": "National University of Singapore",
+    "courseCode": "CS3230",
+    "title": "Design and Analysis of Algorithms",
+    "description": "Covers algorithm design paradigms, complexity analysis, graph algorithms, and an introduction to NP-completeness and approximation algorithms.",
+    "topics": [
+      "Divide and Conquer",
+      "Dynamic Programming",
+      "Graph Algorithms",
+      "NP-Completeness",
+      "Approximation Algorithms"
+    ],
+    "credits": 4,
+    "level": "advanced",
+    "prerequisites": ["CS2040"],
+    "sourceUrl": "https://nusmods.com/courses/CS3230"
+  },
+  "topicCoverage": [
+    {
+      "topic": "Dynamic Programming",
+      "coverage": "covered",
+      "evidence": "Listed explicitly in the NUS course description."
+    },
+    {
+      "topic": "Greedy Algorithms",
+      "coverage": "partial",
+      "evidence": "Not named directly, but covered under general design paradigms."
+    },
+    {
+      "topic": "Graph Algorithms",
+      "coverage": "covered",
+      "evidence": "Listed explicitly in the NUS course description."
+    },
+    {
+      "topic": "Divide and Conquer",
+      "coverage": "covered",
+      "evidence": "Listed explicitly in the NUS course description."
+    },
+    {
+      "topic": "NP-Completeness",
+      "coverage": "covered",
+      "evidence": "Listed explicitly as an introductory topic."
+    },
+    {
+      "topic": "Amortized Analysis",
+      "coverage": "missing",
+      "evidence": "Not mentioned anywhere in the NUS course description."
+    }
+  ],
+  "matchPercentage": 83,
+  "extraTopics": ["Approximation Algorithms"],
+  "caveats": [
+    "NUS course carries 4 credits versus 3 at UW-Madison; confirm credit-hour equivalence with your advisor.",
+    "Amortized analysis is not explicitly covered and may need to be self-studied."
+  ],
+  "advisorJustification": "CS3230 at the National University of Singapore covers the large majority of CS 577's core content, including dynamic programming, graph algorithms, divide-and-conquer, and an introduction to NP-completeness. The course omits explicit treatment of amortized analysis and only partially addresses greedy algorithms, but its added coverage of approximation algorithms suggests comparable rigor. Based on this topic overlap, CS3230 is a reasonable candidate for transfer credit toward CS 577, pending departmental review of the missing topic."
+}
