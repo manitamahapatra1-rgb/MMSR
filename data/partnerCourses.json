@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "nus-cs3230",
+    "school": "National University of Singapore",
+    "courseCode": "CS3230",
+    "title": "Design and Analysis of Algorithms",
+    "description": "Covers algorithm design paradigms, complexity analysis, graph algorithms, and an introduction to NP-completeness and approximation algorithms.",
+    "topics": ["Divide and Conquer", "Dynamic Programming", "Graph Algorithms", "NP-Completeness", "Approximation Algorithms"],
+    "credits": 4,
+    "level": "advanced",
+    "prerequisites": ["CS2040"],
+    "sourceUrl": "https://nusmods.com/courses/CS3230"
+  },
+  {
+    "id": "nus-cs1231s",
+    "school": "National University of Singapore",
+    "courseCode": "CS1231S",
+    "title": "Discrete Structures",
+    "description": "This course introduces mathematical tools required in the study of computer science, developing mathematical maturity and providing basic mathematical prerequisites relevant to computer science.",
+    "topics": ["Propositional and predicate logic", "Proof techniques", "Sets", "Relations", "Mathematical induction", "Functions", "Cardinality", "Counting and probability", "Graphs and trees"],
+    "credits": 4,
+    "level": "intro",
+    "prerequisites": [],
+    "sourceUrl": "https://www.comp.nus.edu.sg/~cs1231s/1_course_info/desc.html"
+  }
+]

@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "id": "uw-cs577",
+    "school": "UW-Madison",
+    "courseCode": "CS 577",
+    "title": "Introduction to Algorithms",
+    "description": "Design and analysis of algorithms, including divide-and-conquer, dynamic programming, greedy methods, graph algorithms, and NP-completeness.",
+    "topics": ["Dynamic Programming", "Greedy Algorithms", "Graph Algorithms", "Divide and Conquer", "NP-Completeness", "Amortized Analysis"],
+    "credits": 3,
+    "level": "advanced",
+    "prerequisites": ["CS 400", "CS 240"],
+    "sourceUrl": "https://guide.wisc.edu/courses/comp_sci/"
+  },
+  {
+    "id": "uw-math-cs-240",
+    "school": "University of Wisconsin-Madison",
+    "courseCode": "MATH/COMP SCI 240",
+    "title": "Introduction to Discrete Mathematics",
+    "description": "Basic concepts of logic, sets, partial order and other relations, and functions. Basic concepts of mathematics (definitions, proofs, sets, functions, and relations) with a focus on discrete structures: integers, bits, strings, trees, and graphs. Propositional logic, Boolean algebra, and predicate logic. Mathematical induction and recursion. Invariants and algorithmic correctness. Recurrences and asymptotic growth analysis. Fundamentals of counting.",
+    "topics": ["Propositional logic", "Predicate logic", "Boolean algebra", "Sets and relations", "Functions", "Mathematical induction and recursion", "Invariants and algorithmic correctness", "Recurrences and asymptotic growth analysis", "Fundamentals of counting"],
+    "credits": 3,
+    "level": "intermediate",
+    "prerequisites": ["MATH 217", "MATH 221", "MATH 275"],
+    "sourceUrl": "https://people.math.wisc.edu/~soskova/teaching/240/Math240.pdf"
+  }
+]
