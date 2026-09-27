@@ -199,5 +199,8 @@ export async function getMatch(
   options: { fresh?: boolean } = {}
 ): Promise<CourseMatch> {
   return (await getMatchWithSource(uwId, foreignId, options)).match;
+<<<<<<< HEAD
 >>>>>>> main
+=======
+>>>>>>> 7eea0ed73c1b42b221282ff9e51e382877380bb3
 }
